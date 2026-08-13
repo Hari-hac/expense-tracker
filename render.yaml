@@ -1,0 +1,19 @@
+# Render deployment config
+# https://render.com/docs/render-yaml-spec
+
+services:
+  - type: web
+    name: expense-tracker-api
+    runtime: node
+    region: singapore
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false   # Set this manually in Render dashboard
+      - key: FRONTEND_URL
+        sync: false   # Set to your Vercel URL after frontend deploys

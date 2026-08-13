@@ -1,0 +1,31 @@
+### CREATE - POST new expense
+POST http://localhost:5000/api/expenses
+Content-Type: application/json
+
+{
+  "title": "Lunch",
+  "amount": 120,
+  "category": "Food"
+}
+
+###
+
+### GET - Fetch all expenses
+GET http://localhost:5000/api/expenses
+
+###
+
+### DELETE - Delete expense by ID (replace with actual _id from MongoDB)
+DELETE http://localhost:5000/api/expenses/PASTE_ID_HERE
+
+###
+
+### UPDATE - Update expense by ID
+PUT http://localhost:5000/api/expenses/PASTE_ID_HERE
+Content-Type: application/json
+
+{
+  "title": "Dinner",
+  "amount": 200,
+  "category": "Food"
+}
